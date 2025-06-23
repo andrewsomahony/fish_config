@@ -1,4 +1,5 @@
 if status is-interactive
+    alias tailscale=/Applications/Tailscale.app/Contents/MacOS/Tailscale
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
     set -U fish_color_normal B3B1AD
