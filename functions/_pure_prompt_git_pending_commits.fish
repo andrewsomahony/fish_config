@@ -3,7 +3,7 @@ function _pure_prompt_git_pending_commits
     set --local git_unpulled_commits
 
     set --local has_upstream (command git rev-parse --abbrev-ref '@{upstream}' 2>/dev/null)
-    if test -n "$has_upstream"  # check there is an upstream repo configured
+    if test $status -eq 0  # check there is an upstream repo configured
         and test "$has_upstream" != '@{upstream}' # Fixed #179, dont check the empty repo
         command git rev-list --left-right --count 'HEAD...@{upstream}' \
         | read --local --array git_status
