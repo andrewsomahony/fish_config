@@ -5,11 +5,10 @@ function _pure_prompt_nixdevshell \
         and test "$pure_enable_nixdevshell" = true;
 
         set --local shell_level "$SHLVL"
-        if test "$shell_level" -gt 1 
-          set --local prefix (_pure_set_color $pure_color_nixdevshell_prefix)$pure_symbol_nixdevshell_prefix
-          set --local symbol (_pure_set_color $pure_color_nixdevshell_status)$IN_NIX_SHELL
-
-          echo "$prefix$symbol"
+        set --local prefix (_pure_set_color $pure_color_nixdevshell_prefix)$pure_symbol_nixdevshell_prefix
+        set --local max (math "$shell_level - 2")
+        for level in (seq 0 1 $max 2>/dev/null)
+          echo "$prefix"
         end
     end
 end
