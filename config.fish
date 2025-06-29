@@ -3,6 +3,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
     set -U pure_enable_nixdevshell true
+    set -U pure_symbol_bound_container_prefix "🐋"
+    set -U pure_symbol_container_prefix "📦"
     set -U fish_color_normal B3B1AD
     set -U fish_color_command 39BAE6
     set -U fish_color_keyword 39BAE6

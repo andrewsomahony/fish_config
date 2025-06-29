@@ -101,7 +101,7 @@ SETUVAR pure_show_subsecond_command_duration:false
 SETUVAR pure_show_system_time:false
 SETUVAR pure_symbol_aws_profile_prefix:
 SETUVAR pure_symbol_bound_container_prefix:\U0001f40b
-SETUVAR pure_symbol_container_prefix:\U0001f40b
+SETUVAR pure_symbol_container_prefix:\U0001f4e6
 SETUVAR pure_symbol_git_dirty:\x2a
 SETUVAR pure_symbol_git_stash:\u2261
 SETUVAR pure_symbol_git_unpulled_commits:\u21e3
