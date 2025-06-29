@@ -6,7 +6,7 @@ function _prompt_bound_container
     # !!! I suppose we should one day, but container-within-container
     # !!! isn't really something that we use at this time
 
-    if _pure_is_inside_container
+    if not _pure_is_inside_container
       bash ~/dev/container/detect_with_error.sh
 
       if test $status -eq 0
