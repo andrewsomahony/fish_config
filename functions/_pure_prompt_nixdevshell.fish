@@ -6,7 +6,14 @@ function _pure_prompt_nixdevshell \
 
         set --local shell_level "$SHLVL"
         set --local prefix (_pure_set_color $pure_color_nixdevshell_prefix)$pure_symbol_nixdevshell_prefix
-        set --local max (math "$shell_level - 2")
+
+        set --local max
+        if _pure_is_inside_container
+          set max (math "$shell_level - 1")
+        else
+          set max (math "$shell_level - 2")
+        end
+
         # Redirect stderr as we get an annoying message when our max is less than 0
         for level in (seq 0 1 $max 2>/dev/null)
           echo "$prefix"
