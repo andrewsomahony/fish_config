@@ -13,11 +13,11 @@ function _pure_prompt_first_line \
     set --local prompt (_pure_print_prompt \
                             $prompt_ssh \
                             $prompt_bound_container \
+                            $prompt_nixdevshell \
                             $prompt_container \
                             $prompt_k8s \
                             $prompt_git \
-                            $prompt_command_duration \
-                            $prompt_nixdevshell
+                            $prompt_command_duration
                         )
     set --local prompt_width (_pure_string_width $prompt)
     set --local current_folder (_pure_prompt_current_folder $prompt_width)
@@ -26,9 +26,9 @@ function _pure_prompt_first_line \
     if set --query pure_begin_prompt_with_current_directory; and test "$pure_begin_prompt_with_current_directory" = true
         set prompt_components \
             $prompt_bound_container \
+            $prompt_nixdevshell \
             $prompt_container \
             $current_folder \
-            $prompt_nixdevshell \
             $prompt_git \
             $prompt_ssh \
             $prompt_k8s \
