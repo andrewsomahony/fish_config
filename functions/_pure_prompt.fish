@@ -21,7 +21,7 @@ function _pure_prompt \
         $system_time \
         $root_prefix \
         $jobs \
-        $virtualenv \
+  #$virtualenv \
         $aws_profile \
         $vimode_indicator \
         $pure_symbol \
